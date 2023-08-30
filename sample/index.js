@@ -1,32 +1,32 @@
 function myFunction() {
-  document.getElementById('demo').innerHTML = 'Hello World';
+  document.getElementById("demo").innerHTML = "Hello World";
 }
 
 // OPEN INVITATION
 function openInvitation() {
-  var cover = document.getElementById('cover');
-  var hiddenDiv = document.getElementById('main');
+  var cover = document.getElementById("cover");
+  var hiddenDiv = document.getElementById("main");
 
-  const backgroundAudio = document.getElementById('backgroundAudio');
+  const backgroundAudio = document.getElementById("backgroundAudio");
 
   // Check if the cover is currently visible
-  if (cover.style.display !== 'none') {
+  if (cover.style.display !== "none") {
     // Hide the cover and show the hiddenDiv
-    cover.style.display = 'none';
-    hiddenDiv.style.display = 'block'; // You can use "block" or "inline-block" depending on your layout
+    cover.style.display = "none";
+    hiddenDiv.style.display = "block"; // You can use "block" or "inline-block" depending on your layout
   } else {
     // Show the cover and hide the hiddenDiv
-    cover.style.display = 'block';
-    hiddenDiv.style.display = 'none';
+    cover.style.display = "block";
+    hiddenDiv.style.display = "none";
   }
 }
 
 // ROUTER QUERY PARAMS
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // Get the URLSearchParams object from the current URL
   const params = new URLSearchParams(window.location.search);
-  const paramValue = params.get('to');
-  const recipient = document.getElementById('recipient');
+  const paramValue = params.get("to");
+  const recipient = document.getElementById("recipient");
 
   if (paramValue) {
     let str = paramValue.replace(/\w+/g, function (w) {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     recipient.textContent = `${str}`;
   } else {
-    recipient.textContent = 'Recipient';
+    recipient.textContent = "Recipient";
   }
 });
 
@@ -48,25 +48,31 @@ function setText(selector, text) {
   return nodeList;
 }
 
+// EFEK TEXT
+// function toggleAnimation() {
+//   var textElement = document.querySelector(".small-to-big");
+//   textElement.classList.toggle("active");
+// }
+
 window.onload = function () {
   // Or window.addEventListener("load", function() {
   // bride
-  setText('#groom', 'Galih');
-  setText('#bride', 'Ratna');
+  setText("#groom", "Galih");
+  setText("#bride", "Ratna");
 
   // akad
-  setText('#akad-day', 'Sab, 26 Agustus 2023');
-  setText('#akad-time', '10.00 / 11.00 WIB');
-  setText('#akad-venue', 'Masjid Baitussalam');
-  setText('#akad-loc', 'Yogyakarta');
+  setText("#akad-day", "Sab, 26 Agustus 2023");
+  setText("#akad-time", "10.00 / 11.00 WIB");
+  setText("#akad-venue", "Masjid Baitussalam");
+  setText("#akad-loc", "Yogyakarta");
 
   // resepsi
-  setText('#reception-day', 'Minggu, 27 Agustus 2023');
-  setText('#reception-time', '10.00 - 15.00 WIB');
-  setText('#reception-venue', 'Hotel Amarello');
-  setText('#reception-loc', 'Yogyakarta');
+  setText("#reception-day", "Minggu, 27 Agustus 2023");
+  setText("#reception-time", "10.00 - 15.00 WIB");
+  setText("#reception-venue", "Hotel Amarello");
+  setText("#reception-loc", "Yogyakarta");
 
   // card
-  setText('#card-name', 'Galih');
-  setText('#card-num', '137002251313');
+  setText("#card-name", "Galih");
+  setText("#card-num", "137002251313");
 };
