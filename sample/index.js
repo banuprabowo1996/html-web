@@ -54,6 +54,10 @@ function setText(selector, text) {
 //   textElement.classList.toggle("active");
 // }
 
+function payment(params) {
+  console.log("payment");
+}
+
 window.onload = function () {
   // Or window.addEventListener("load", function() {
   // bride

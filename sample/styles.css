@@ -52,6 +52,14 @@
   width: 487px;
   margin: auto;
 } */
+.floating-icon {
+  position: absolute;
+  top: 1vh; /* Adjust the top position as needed */
+  right: 0; /* Adjust the right position as needed */
+  font-size: 24px; /* Adjust the icon size as needed */
+  color: #000; /* Adjust the icon color as needed */
+  z-index: 1; /* Ensure the icon is above other content */
+}
 
 /* awal */
 .container {
@@ -107,6 +115,7 @@
 /* 1 */
 .container-1 {
   background-image: url("assets/img/cd3389126eb7a109d58c02023be5d8f7\ 1.png");
+  background-color: rgba(0, 0, 0, 0.8);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,39 +124,37 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  animation: translateXAnimation 0.7s ease-in-out;
 }
 
 .text-1-1 {
   flex: 1;
-  margin-top: 100px;
-  font-size: 36px;
+  margin-top: 50px;
+  font-size: 42px;
   transition: transform 0.3s ease;
-}
-
-.text-1-1:hover {
-  transform: scale(1.4);
+  animation: grow 1s;
+  animation-delay: 0.6s;
 }
 
 .text-1-2 {
   flex: 1;
-  font-size: 14px;
+  font-size: 18px;
   transition: transform 0.3s ease;
-}
-
-.text-1-2:hover {
-  transform: scale(1.4);
+  animation: grow 1s;
+  animation-delay: 0.6s;
+  margin-top: -20px;
 }
 
 .bride {
-  flex: 4;
+  flex: 8;
   color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 64px;
+  font-size: 96px;
   transition: transform 0.3s ease;
+  margin-top: -20px;
 }
 
 .swipe-up {
@@ -158,13 +165,14 @@
   align-items: center;
   position: absolute;
   bottom: 0;
-  animation-name: example;
+  animation-name: swipe-up;
   animation-duration: 0.8s;
   animation-iteration-count: 4;
   animation-direction: alternate-reverse;
+  animation-delay: 0.6s;
 }
 
-@keyframes example {
+@keyframes swipe-up {
   0% {
     margin-bottom: 70px;
   }
@@ -181,16 +189,17 @@
 .container-2 {
   background-image: url("assets/img/a1d41262ccffb8b78a09ed5c6941ac08\ 1.png");
   background-color: rgba(0, 0, 0, 0.8);
+  background-position: center top;
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   position: relative;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 100%;
+  animation: translateXAnimation 0.7s ease-in-out;
 }
 
 .text-2-1 {
@@ -198,14 +207,10 @@
   position: absolute;
   top: 0;
   margin-top: 80px;
-  font-size: 10px;
+  font-size: 14px;
   color: white;
   letter-spacing: 4px;
   transition: transform 0.3s ease;
-}
-
-.text-2-1:hover {
-  transform: scale(1.4);
 }
 
 .bride-2 {
@@ -213,36 +218,42 @@
   position: absolute;
   top: 50;
   flex: 3;
-  font-size: 64px;
+  font-size: 96px;
   color: white;
+}
+
+.groom2 {
+  animation: translateXAnimation 0.7s ease-in-out;
 }
 
 .text-2-2 {
   flex: 3;
   position: absolute;
-  bottom: 0;
+  bottom: 4vh;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   color: white;
+  font-size: 20px;
 }
 /* ----------------- */
 
 /* 3 */
 .container-3 {
   /* background-image: url('assets/img/cd3389126eb7a109d58c02023be5d8f7\ 1.png'); */
-  background-color: rgba(0, 0, 0, 0.8);
-  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.2);
   background-position: center;
-  position: relative;
+  background-repeat: no-repeat;
   height: 100vh;
-  /* height: 640px; */
+  position: relative;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: translateXAnimation 0.7s ease-in-out;
+  overflow: hidden;
 }
 
 .section-3-1 {
@@ -251,8 +262,10 @@
   top: 0;
   display: flex;
   flex-direction: column;
-  width: 100vh;
+  width: 100%;
   max-width: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .section-3-2 {
@@ -261,26 +274,29 @@
   top: 50;
   display: flex;
   flex-direction: column;
-  width: 100vh;
+  width: 100%;
   max-width: 100%;
 }
 
 .section-3-3 {
-  flex: 1;
   position: absolute;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  width: 100vh;
+  width: 100%;
   max-width: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .text-3-1 {
   z-index: 3;
   position: absolute;
-  margin-top: 14vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   align-self: center;
   flex-direction: column;
@@ -309,8 +325,22 @@
 }
 
 .text-4-1 {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 20px;
+}
+
+.image-container-4 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+  grid-template-rows: repeat(2, 1fr); /* Two rows of equal height */
+  gap: 10px; /* Add some spacing between the images (adjust as needed) */
+}
+
+/* Style for individual images (optional) */
+.image-container-4 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* Preserve aspect ratio and cover the cell */
 }
 /* ----------------- */
 
@@ -333,35 +363,82 @@
 .text-5-1 {
   position: absolute;
   top: 93px;
-  font-size: 20px;
+  font-size: 32px;
   margin-left: -50px;
 }
 
 .text-5-2 {
   position: absolute;
   top: 96px;
-  font-size: 24px;
-  margin-right: -60px;
+  font-size: 36px;
+  margin-right: -120px;
 }
 
 .text-5-3 {
   position: absolute;
   top: 153px;
-  font-size: 12px;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.link {
-  margin-top: -120px;
+.payment-5 {
+  position: relative;
+  margin-top: -20vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4em;
+  font-size: 16px;
+  color: white;
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.payment-5:hover {
+  transition-duration: 0.1s;
+  background-color: #3a3a3a;
+}
+
+.payment-5:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.payment-5:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.payment-5:active {
+  top: 1px;
 }
 
 .text-5-4 {
   position: absolute;
   bottom: 0;
-  font-size: 36px;
+  margin-bottom: 4vh;
+  font-size: 44px;
 }
 /* ----------------- */
 
@@ -380,10 +457,11 @@
 }
 
 .text-6 {
-  top: 32px;
+  top: 48px;
   color: black;
   font-size: 14px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .card-6 {
@@ -450,6 +528,15 @@
 }
 
 /* id id id id */
+#groom {
+  animation: grow 1s;
+  animation-delay: 0.6s;
+}
+
+#bride {
+  animation: grow 1s;
+  animation-delay: 0.6s;
+}
 #dear {
   font-size: 24px;
   color: white;
@@ -462,26 +549,46 @@
 }
 
 #ser-1 {
-  /* width: 100%;
-  max-width: 100%; */
   z-index: 1;
-  margin-top: 20px;
+  height: 30vh;
 }
 
 #ser-2 {
-  /* width: 100%;
-  max-width: 100%; */
   z-index: 2;
+  height: 30vh;
   margin-top: -30px;
 }
 
-#groom:hover {
-  transform: scale(1.4);
+/* KEYFRAMES */
+@keyframes translateXAnimation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(
+      0
+    ); /* Adjust the value to control the distance of translation */
+  }
 }
 
-#bride:hover {
-  transform: scale(1.4);
+@keyframes slide {
+  0% {
+    translate: 100%;
+  }
+  100% {
+    translate: 0;
+  }
 }
+
+@keyframes grow {
+  0% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* -------------- Mobile-First Responsive Build (with CSS Grid) ---------------- */
 
 /* variables */
@@ -522,9 +629,18 @@ body {
 }
 
 /* mobile styles */
-
+@media screen and (max-width: 320) {
+  body {
+    width: 320px; /* Set the fixed width */
+    margin: 0 auto; /* Center the content horizontally */
+  }
+}
 /* small tablet styles */
-@media screen and (min-widht: 620px) {
+@media screen and (min-width: 620px) {
+  body {
+    width: 620px; /* Set the fixed width */
+    margin: 0 auto; /* Center the content horizontally */
+  }
 }
 
 /* large tablet & laptop styles */

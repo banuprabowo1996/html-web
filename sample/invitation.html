@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
   <title>Bridal Bliss - Your Dream Wedding</title>
 </head>
 
@@ -27,14 +28,22 @@
     </div>
 
     <div id="main" style="display: none;">
+      <div id="player">
+        <audio controls autoplay hidden>
+          <source src="assets/audio/kangenn-piano.mp3" type="audio/mpeg">
+          unsupported !!
+        </audio>
+      </div>
+
       <!-- 1 -->
-      <div class="container-1">
+      <div class=" container-1">
+        <i class="gg-music floating-icon"></i>
         <p class="text-1-1 imperial-script">You are invited to</p>
         <p class="text-1-2 headland-one">THE WEDDING OF</p>
         <div class="bride grey-qo">
-          <p id="groom" class="small-to-big">Galih</p>
-          <p>&</p>
-          <p id="bride" class="small-to-big">Ratna</p>
+          <p id="groom">Galih</p>
+          <p style="margin-top: -40px;">&</p>
+          <p id="bride" style="margin-top: -40px;">Ratna</p>
         </div>
         <div class="swipe-up">
           <img src="assets/svg/51038s54 1.svg" alt="swipe">
@@ -46,9 +55,9 @@
       <div class="container-2">
         <p class="text-2-1 headland-one">OUR WEDDING</p>
         <div class="bride-2 grey-qo">
-          <p id="groom" style="margin-left: -100px;">Galih</p>
+          <p id="groom" style="margin-left: -100px;" class="groom2">Galih</p>
           <p>&</p>
-          <p id="bride" style="margin-left: 100px;">Ratna</p>
+          <p id="bride" style="margin-left: 100px;" class="birde2">Ratna</p>
         </div>
 
         <div class="text-2-2 grechen-fuemen">
@@ -88,14 +97,20 @@
           <div class="text-4-1 marck-script">
             <p>Happy Moment</p>
           </div>
-          <div class="container-img-4">
+          <div class="image-container-4">
+            <img src="assets/img/7b4819efb605e00174f2b1a7bd9ca6aa 1.png" alt="Image 1">
+            <img src="assets/img/38fe008b703d1a160b7ca9beb36d27f0 1.png" alt="Image 2">
+            <img src="assets/img/f8adcdd0d820d629743e41d2eee705ff 1.png" alt="Image 3">
+            <img src="assets/img/86aca3b17a7fc7863ae1d627f19998dd 1.png" alt="Image 4">
+          </div>
+          <!-- <div class="container-img-4">
             <img src="assets/img/7b4819efb605e00174f2b1a7bd9ca6aa 1.png" alt="">
             <img src="assets/img/38fe008b703d1a160b7ca9beb36d27f0 1.png" alt="">
           </div>
           <div class="container-img-4">
             <img src="assets/img/f8adcdd0d820d629743e41d2eee705ff 1.png" alt="">
             <img src="assets/img/86aca3b17a7fc7863ae1d627f19998dd 1.png" alt="">
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -109,8 +124,8 @@
           <p style="margin-top: -4px;">mengirimkan hadiah, silahkan klik melalui</p>
           <p style="margin-top: -4px;">tautan berikut:</p>
         </div>
-        <div class="link">
-          <img src="assets/img/pngwing 3.png" alt="">
+        <div class="payment-5">
+          <img src="assets/img/pngwing 3.png" alt="" onclick="payment()">
         </div>
         <p class="text-5-4 herr-von-muellerhoff">Terima Kasih</p>
       </div>
