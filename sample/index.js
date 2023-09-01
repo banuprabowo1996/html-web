@@ -1,5 +1,8 @@
+let audio = document.getElementById("myAudio");
+
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
+  audio.play();
 }
 
 // OPEN INVITATION
@@ -53,9 +56,45 @@ function setText(selector, text) {
 //   var textElement = document.querySelector(".small-to-big");
 //   textElement.classList.toggle("active");
 // }
+function toggleIcon(iconElement) {
+  let audio = document.getElementById("myAudio");
+  if (iconElement.classList.contains("gg-play-pause-r")) {
+    // If the current class is "gg-music", switch to "gg-play-pause-r"
+    iconElement.classList.remove("gg-play-pause-r");
+    iconElement.classList.add("gg-music");
+    // Add logic to pause audio or perform any other action here
+    audio.pause();
+  } else {
+    // If the current class is "gg-play-pause-r", switch to "gg-music"
+    iconElement.classList.remove("gg-music");
+    iconElement.classList.add("gg-play-pause-r");
+    // Add logic to play audio or perform any other action here
+    audio.play();
+  }
+}
 
 function payment(params) {
   console.log("payment");
+}
+
+function copyText() {
+  // Get the paragraph element
+  var copyText = document.getElementById("mytxt");
+
+  var tempTextarea = document.createElement("textarea");
+  tempTextarea.value = copyText.textContent; // Set the textarea value to the text content of the <p>
+
+  document.body.appendChild(tempTextarea);
+
+  // Select the text inside the textarea
+  tempTextarea.select();
+  tempTextarea.setSelectionRange(0, 99999); // For mobile devices
+
+  document.execCommand("copy");
+
+  document.body.removeChild(tempTextarea);
+
+  alert("Copied the text: " + copyText.textContent);
 }
 
 window.onload = function () {

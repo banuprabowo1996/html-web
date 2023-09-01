@@ -7,16 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link href='https://unpkg.com/css.gg@2.0.0/icons/css/music.css' rel='stylesheet'>
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/play-pause-r.css' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <title>Bridal Bliss - Your Dream Wedding</title>
 </head>
 
 <body>
+
   <div>
     <!-- awal -->
     <div class="container" id="cover">
       <div class="text-center">
         <p class="marck-script" id="dear">Dear</p>
-        <p class="headland-one" id="recipient">Banu Prabowo</p>
+        <p class="headland-one recipient" id="recipient">Banu Prabowo</p>
       </div>
 
       <button class="icon-text-container" onclick="openInvitation()" style="border: 0;">
@@ -28,16 +32,16 @@
     </div>
 
     <div id="main" style="display: none;">
-      <div id="player">
-        <audio controls autoplay hidden>
-          <source src="assets/audio/kangenn-piano.mp3" type="audio/mpeg">
-          unsupported !!
-        </audio>
-      </div>
 
       <!-- 1 -->
       <div class=" container-1">
-        <i class="gg-music floating-icon"></i>
+
+        <i class="gg-play-pause-r" style="position: fixed; margin-top: 2vh;" onclick="toggleIcon(this)">
+          <audio controls autoplay hidden id="myAudio">
+            <source src="assets/audio/kangenn-piano.mp3" type="audio/mpeg">
+            unsupported !!
+          </audio></i>
+
         <p class="text-1-1 imperial-script">You are invited to</p>
         <p class="text-1-2 headland-one">THE WEDDING OF</p>
         <div class="bride grey-qo">
@@ -55,17 +59,36 @@
       <div class="container-2">
         <p class="text-2-1 headland-one">OUR WEDDING</p>
         <div class="bride-2 grey-qo">
-          <p id="groom" style="margin-left: -100px;" class="groom2">Galih</p>
-          <p>&</p>
-          <p id="bride" style="margin-left: 100px;" class="birde2">Ratna</p>
+
+
+          <p style="margin-left: -100px;" class="animate__animated animate__backInLeft animate__slower	3s">Galih</p>
+          <p style="margin-top: -36px;">&</p>
+          <p style="margin-left: 120px; margin-top: -36px;"
+            class="animate__animated animate__backInRight animate__slower	3s">Ratna</p>
         </div>
 
         <div class="text-2-2 grechen-fuemen">
-          <p class="marck-script">Akad Nikah</p>
+          <p class="marck-script akad">Akad Nikah</p>
+          <!-- efek bounce animate.css -->
+          <p>
+            <span>Sabtu</span>
+            <span>23</span>
+            <span>September</span>
+            <span>2023</span><br>
+            <span>09.00</span>
+            <span>s/d</span>
+            <span>11.00</span>
+            <span>WIB</span><br>
+            <span>Masjid,</span>
+            <span>Istiqlal</span><br>
+            <span>Jakarta</span>
+            <span>Pusat</span>
+          </p>
+          <!-- <p class="marck-script">Akad Nikah</p>
           <p id="akad-day">Sabtu, 23 September 2023</p>
           <p id="akad-time">09.00 s/d 11.00 WIB</p>
           <p id="akad-venue">Masjid Istiqlal</p>
-          <p id="akad-loc">Jakarta Pusat</p>
+          <p id="akad-loc">Jakarta Pusat</p> -->
         </div>
       </div>
 
@@ -78,8 +101,8 @@
           <img src="assets/img/ser 2.png" alt="" id="ser-1">
           <img src="assets/img/ser 1.png" alt="" id="ser-2">
 
-          <div class="text-3-1 grechen-fuemen">
-            <p class="marck-script" style="font-size: 28px;">Resepsi Pernikahan</p>
+          <div class="text-3-1 grechen-fuemen animate__animated animate__fadeIn">
+            <p class="marck-script resepsi">Resepsi Pernikahan</p>
             <p id="reception-day">Minggu, 24 September 2023</p>
             <p id="reception-time">10.00 s/d 15.00 WIB</p>
             <p id="reception-venue">Istora Senayan</p>
@@ -98,19 +121,15 @@
             <p>Happy Moment</p>
           </div>
           <div class="image-container-4">
-            <img src="assets/img/7b4819efb605e00174f2b1a7bd9ca6aa 1.png" alt="Image 1">
-            <img src="assets/img/38fe008b703d1a160b7ca9beb36d27f0 1.png" alt="Image 2">
-            <img src="assets/img/f8adcdd0d820d629743e41d2eee705ff 1.png" alt="Image 3">
-            <img src="assets/img/86aca3b17a7fc7863ae1d627f19998dd 1.png" alt="Image 4">
+            <img src="assets/img/7b4819efb605e00174f2b1a7bd9ca6aa 1.png" alt="Image 1"
+              class="animate__animated animate__flipInY animate__slower 5s animate__repeat-3 3">
+            <img src="assets/img/38fe008b703d1a160b7ca9beb36d27f0 1.png" alt="Image 2"
+              class="animate__animated animate__flipInY animate__slower 5s animate__repeat-3 3">
+            <img src="assets/img/f8adcdd0d820d629743e41d2eee705ff 1.png" alt="Image 3"
+              class="animate__animated animate__flipInY animate__slower 5s animate__repeat-3 3">
+            <img src="assets/img/86aca3b17a7fc7863ae1d627f19998dd 1.png" alt="Image 4"
+              class="animate__animated animate__flipInY animate__slower 5s animate__repeat-3 3">
           </div>
-          <!-- <div class="container-img-4">
-            <img src="assets/img/7b4819efb605e00174f2b1a7bd9ca6aa 1.png" alt="">
-            <img src="assets/img/38fe008b703d1a160b7ca9beb36d27f0 1.png" alt="">
-          </div>
-          <div class="container-img-4">
-            <img src="assets/img/f8adcdd0d820d629743e41d2eee705ff 1.png" alt="">
-            <img src="assets/img/86aca3b17a7fc7863ae1d627f19998dd 1.png" alt="">
-          </div> -->
         </div>
       </div>
 
@@ -138,10 +157,10 @@
             <img src="assets/img/Vector 2.png" alt="">
             <img src="assets/img/Bank Mandiri Logo (PNG-1080p) - FileVector69 1.png" alt="" class="logo-bank">
             <p class="text-name-6" id="card-name">Galih</p>
-            <p class="text-card-num-6" id="card-num">1370022513622</p>
-            <div class="rectangle-6">
+            <p class="text-card-num-6" id="mytxt">1370022513622</p>
+            <div class="rectangle-6" onclick="copyText()">
               <img src="assets/svg/pngwing 4.svg" alt="" class="icon-copy">
-              <p class="text-copy">Copy Number</p>
+              <p class="text-copy" id="wantToCopy">Copy Number</p>
             </div>
           </div>
         </div>

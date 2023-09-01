@@ -52,14 +52,6 @@
   width: 487px;
   margin: auto;
 } */
-.floating-icon {
-  position: absolute;
-  top: 1vh; /* Adjust the top position as needed */
-  right: 0; /* Adjust the right position as needed */
-  font-size: 24px; /* Adjust the icon size as needed */
-  color: #000; /* Adjust the icon color as needed */
-  z-index: 1; /* Ensure the icon is above other content */
-}
 
 /* awal */
 .container {
@@ -73,6 +65,20 @@
   justify-content: center;
   align-items: center;
   transition: transform 0.1s ease;
+}
+
+.recipient {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .container button:hover {
@@ -207,35 +213,134 @@
   position: absolute;
   top: 0;
   margin-top: 80px;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   transition: transform 0.3s ease;
 }
 
 .bride-2 {
   text-align: center;
   position: absolute;
-  top: 50;
+  top: 20vh;
   flex: 3;
-  font-size: 96px;
+  font-size: 64px;
   color: white;
-}
-
-.groom2 {
-  animation: translateXAnimation 0.7s ease-in-out;
 }
 
 .text-2-2 {
   flex: 3;
   position: absolute;
-  bottom: 4vh;
+  bottom: 2vh;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  font-size: 20px;
+  font-size: large;
+}
+
+.akad {
+  font-size: xx-large;
+  margin-bottom: -3px;
+}
+
+.text-2-2 p {
+  /* font-family: "Montserrat Medium"; */
+  max-width: 18ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.text-2-2 p span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.text-2-2 p span:nth-child(1) {
+  animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(2) {
+  animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(3) {
+  animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(4) {
+  animation: fade-in 0.8s 1.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(5) {
+  animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(6) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(7) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(8) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(9) {
+  animation: fade-in 0.8s 1.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(10) {
+  animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(11) {
+  animation: fade-in 0.8s 2.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(12) {
+  animation: fade-in 0.8s 2.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(13) {
+  animation: fade-in 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(14) {
+  animation: fade-in 0.8s 2.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 p span:nth-child(15) {
+  animation: fade-in 0.8s 2.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+/* .text-2-2 h1 span:nth-child(16) {
+  animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 h1 span:nth-child(17) {
+  animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.text-2-2 h1 span:nth-child(18) {
+  animation: fade-in 0.8s 1.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+} */
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
 }
 /* ----------------- */
 
@@ -289,14 +394,19 @@
   overflow: hidden;
 }
 
+.resepsi {
+  font-size: xx-large;
+}
+
 .text-3-1 {
   z-index: 3;
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   text-align: center;
-  font-size: 20px;
+  font-size: large;
   display: flex;
   align-self: center;
   flex-direction: column;
@@ -509,6 +619,39 @@
   transform: translate(-50%, -50%);
   z-index: 1;
   display: flex;
+}
+
+.rectangle-6:hover {
+  transition-duration: 0.1s;
+  /* background-color: #3a3a3a; */
+}
+
+.rectangle-6:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.rectangle-6:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.rectangle-6:active {
+  top: 11vh;
 }
 
 .icon-copy {
